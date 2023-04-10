@@ -44,3 +44,4 @@ fraction = rate / 100.0;
   }
     return 0;
 }
+
