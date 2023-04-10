@@ -1,3 +1,5 @@
+#include <iostream>
+using namespace std;
 int main() {
     int n = 7;
     int width = n * 2 - 1;
