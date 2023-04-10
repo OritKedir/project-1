@@ -31,15 +31,3 @@ fraction = rate / 100.0;
      if (choice==1) {
         cout << "\nYear\tAdjusted Cost\tPrice Difference\n";
         for (int i = 1; i <= years; i++) {
- cout << i << "\t$" << adjustedCost[i-1] *(1 +  fraction) << "\t\t$" << priceDiff[i] << endl;
-        }
-    } else if(choice==0) {
-        cout << "\nEnter the year you want to see the adjusted cost for: ";
-        cin >> years;
-        cout << "Adjusted cost in year " << years << ": $" <<  adjustedCost[years] << endl;
-    }
-    else{
-      cout<<"Invalid input";
-  }
-    return 0;
-}
