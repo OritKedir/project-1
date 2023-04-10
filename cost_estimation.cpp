@@ -12,3 +12,5 @@ int main() {
     cin >> years;
     cout << "Enter the rate of inflation as a percentage: ";
     cin >> rate;
+
+
