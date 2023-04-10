@@ -12,16 +12,19 @@ int main() {
     cin >> years;
     cout << "Enter the rate of inflation as a percentage: ";
     cin >> rate;
- if (choice==1) {
-        cout << "\nYear\tAdjusted Cost\tPrice Difference\n";
-        for (int i = 1; i <= years; i++) {
-            cout << i << "\t$" << adjustedCost[i-1] *(1 +  fraction) << "\t\t$" << priceDiff[i] << endl;
-        }
-    } else if(choice=0) {
-        cout << "\nEnter the year you want to see the adjusted cost for: ";
-        cin >> years;
-        cout << "Adjusted cost in year " << year << ": $" <<  adjustedCost[year] << endl;
+fraction = rate / 100.0;
+
+    double adjustedCost = current_cost;
+    double priceDiff[years+1];
+    priceDiff[0] = current_cost;
+
+    for (int i = 1; i <= years; i++) {
+        adjustedCost += (adjustedCost * fraction);
+        priceDiff[i] = adjustedCost - priceDiff[i-1];
     }
-   
-    return 0;
-}
+
+    cout << fixed << setprecision(2);
+    cout << "\nEstimated cost of the item after " << years << " years: $" << adjustedCost << endl;
+
+    cout << "\nDo you want to see the cost difference between every year? (1 for Yes, 0 for No): ";
+    cin >> choice;
