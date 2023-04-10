@@ -28,3 +28,6 @@ fraction = rate / 100.0;
 
     cout << "\nDo you want to see the cost difference between every year? (1 for Yes, 0 for No): ";
     cin >> choice;
+     if (choice==1) {
+        cout << "\nYear\tAdjusted Cost\tPrice Difference\n";
+        for (int i = 1; i <= years; i++) {
